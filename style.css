@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #9adcff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  background: #fff;
+  border-radius: 1.25rem;
+  width: 400px;
+}
+
+.wrapper header {
+  color: #9adcff;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 16px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+header i {
+  cursor: pointer;
+  font-size: 0px;
+  margin-right: 8px;
+}
+
+.wrapper.active header i {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.wrapper .input-part {
+  margin: 20px 25px 30px;
+}
+
+.wrapper.active .input-part {
+  display: none;
+}
+
+.input-part .info-text {
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+.info-text.error {
+  display: block;
+  color: #b8405e;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.info-text.pending {
+  display: block;
+  color: #1572a1;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+
+.input-part :where(input, button) {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+}
+
+.input-part input {
+  border: 2px solid #bfbfbf;
+  text-align: center;
+}
+
+.input-part input:is(:focus, :valid) {
+  border: 2px solid #9adcff;
+}
+
+.input-part .separator {
+  width: 100%;
+  height: 2px;
+  background: #bfbfbf;
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator::before {
+  content: 'or';
+  font-size: 19px;
+  color: #ccc;
+  padding: 0 15px;
+  background: #fff;
+}
+
+.input-part button {
+  background: #9adcff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wrapper .weather-part {
+  margin: 30px 0 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper.active .weather-part {
+  display: flex;
+}
+
+.weather-part img {
+  margin-top: -60px;
+  height: 300px;
+  width: 300px;
+}
+
+.temp-wrapper .temp {
+  display: flex;
+  font-size: 72px;
+  font-weight: 500;
+}
+
+.weather-part .temp-wrapper {
+  margin-top: -90px;
+}
+
+.temp-wrapper.temp .numb {
+  font-weight: 600;
+}
+
+.temp-wrapper .temp .deg {
+  font-size: 40px;
+  margin: 10px 5px 0 0;
+  display: block;
+}
+
+.weather-part .weather {
+  font-size: 21px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+
+.weather-part .location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 21px;
+}
+
+.location i {
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.weather-part .bottom-details {
+  border-top: 1px solid #bfbfbf;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bottom-details .column {
+  width: 100%;
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.column i {
+  font-size: 40px;
+  color: #9adcff;
+  padding-right: 5px;
+}
+
+.feels {
+  border-right: 1px solid #bfbfbf;
+}
+
+.details .temp,
+.humidity span {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+
+.details .temp .deg {
+  margin: 0;
+  font-size: 17px;
+  pad: 0 2px 0 1px;
+}
+
+.details p {
+  font-size: 14px;
+  margin-top: -6px;
+}
