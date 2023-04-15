@@ -1,13 +1,12 @@
 let apiKey = 'a2f7b9de22c9bf98117a7c1aa65ed654';
 let api;
-const wrapper = document.querySelector('.wrapper');
-
-inputPart = wrapper.querySelector('.input-part');
-infoText = wrapper.querySelector('.info-text');
-inputField = wrapper.querySelector('input');
-locationBtn = inputPart.querySelector('button');
-wIcon = document.querySelector('.weather-part img');
-arrowBack = wrapper.querySelector('header i ');
+const wrapper = document.querySelector('.wrapper'),
+  inputPart = wrapper.querySelector('.input-part'),
+  infoText = wrapper.querySelector('.info-text'),
+  inputField = wrapper.querySelector('input'),
+  locationBtn = inputPart.querySelector('button'),
+  wIcon = document.querySelector('.weather-part img'),
+  arrowBack = wrapper.querySelector('header i ');
 
 inputField.addEventListener('keyup', (e) => {
   if (e.key == 'Enter' && inputField.value != '') {
@@ -84,5 +83,5 @@ function weatherDetails(info) {
 }
 
 arrowBack.addEventListener('click', () => {
-  wrapper.classList.remove('active' );
+  wrapper.classList.remove('active');
 });
